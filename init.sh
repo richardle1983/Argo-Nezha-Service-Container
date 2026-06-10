@@ -74,7 +74,7 @@ http {
   }
   server {
     listen 127.0.0.1:$GRPC_PROXY_PORT ssl http2;
-    server_name $ARGO_DOMAIN;
+    server_name $ARGO_DOMAIN $REAL_DOMAIN;
     ssl_certificate          $WORK_DIR/nezha.pem;
     ssl_certificate_key      $WORK_DIR/nezha.key;
     underscores_in_headers on;
